@@ -1,0 +1,339 @@
+
+
+body{
+	font-family:  'MS Serif', 'New York', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin:0;
+	padding:0;
+}
+
+.contenedor{
+  width:90%;
+  margin:auto;
+  overflow:hidden;
+}
+
+.color-primario {
+  background-color: dodgerblue;
+}
+
+
+/*Encabezado de la Pagina*/
+
+header {
+  background-color: lightblue;
+  min-height: 70px;
+  padding-top: 15px;
+  overflow:hidden;
+}
+
+.contenedor-flex-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin:auto;
+}
+
+
+.contenedor-flex-1 ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+ 
+}
+
+ .contenedor-flex-1   ul li {
+    margin-right: 20px;
+    &:last-child {
+    margin-right:20px;
+  };  
+        list-style-type: none;
+
+}
+
+
+
+
+.contenedor-flex-1 li a {
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  }
+
+
+/*Banner*/
+
+.banner {
+	
+	min-height: 500px;
+	text-align: center;
+	background:url('img/banner.jpg') ;
+	font-size: 20px;
+}
+
+.titulo-banner{
+  margin-top:0px;
+  font-size:50px;
+  margin-bottom:10px;
+  padding-top: 50px;
+}
+
+
+/*Anuncio para recibir una cuota*/
+
+.colorCuota {
+	background-color: teal;
+	min-height: 150px;	
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}
+
+.colorCuota span {
+	font-size: 1.5rem;
+	margin-right: 10px;
+	
+}
+
+.colorCuota button {
+  height:40px;
+  background:#e8491d;
+  border-radius:5px;
+  border: 0;
+  overflow: hidden;
+}
+
+.colorCuota a {
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+}
+
+/*Seccion de Servicios*/
+
+.contenedor-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap:nowrap;
+
+}
+
+.contenedor-flex > div {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/*Sección de nosotros*/
+
+
+.grid-2{
+  background-color: red ;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: auto-fill;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 
+  "acerca equipo"
+  "valores equipo"
+  "mision equipo"
+  "vision equipo";
+}
+
+.acerca {
+  background-color: red;
+  grid-area: acerca;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.valores {
+  background-color: goldenrod;
+  grid-area: valores;
+  text-align: center;
+
+}
+.valores ul li {
+  list-style-type: none;
+}
+
+
+.mision {
+  background-color: lightblue;
+  grid-area: mision;
+  text-align: center;
+}
+
+
+.vision {
+  background-color: red;
+  grid-area: vision;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.equipo {
+  background-color: teal;
+  grid-area: equipo;
+  background:url('img/equipo.png');
+  
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+
+
+.espacio-nosotros {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.grid-2 p {
+  padding: 10px;
+}
+
+
+/*Sección de CONTACTO*/
+
+.seccion-formulario{
+ min-height: 50vh;
+ background-color: lightblue;
+ padding-top: 80px;
+ padding-bottom: 80px;
+}
+
+.contenedor-formulario{
+  background-color: goldenrod;
+  width: 40%;
+  margin: auto;
+  padding-top: 20px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.contenedor-formulario h3{
+  text-align: center;
+}
+
+.formulario {
+	text-align: center;
+}
+
+.formulario > div {
+	padding-bottom: 20px;
+}
+
+.formulario input, textarea {
+  font-size: 20px;
+  font-family:  'MS Serif', 'New York', sans-serif;
+  width: 80%;  
+}
+
+.alinear-boton {
+  text-align: center;
+}
+
+  .boton {
+    background-color: navy;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-family:  'MS Serif', 'New York', sans-serif;
+    padding:  5px 50px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+/*El pie de la página*/
+
+footer {
+  text-align: center;
+  background-color: teal;
+  padding:20px;
+  min-height: 100px;
+}
+
+
+/*Media Queries*/
+
+@media(max-width: 768px){
+  .contenedor-flex{
+    flex-wrap: wrap;
+  }
+
+  .contenedor-flex-1{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+ .contenedor-flex-1 li a {  
+   font-size: 0.8rem;  
+   }
+
+
+.grid-2{
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: auto-fill;
+  grid-template-columns: 100%;
+  grid-template-areas: 
+  "acerca"
+  "valores"
+  "mision"
+  "vision";
+}
+
+.equipo {display: none;}
+
+.contenedor-formulario{
+  background-color: goldenrod;
+  width: 60%; 
+  margin: auto;
+  padding-top: 20px;
+}
+
+.formulario input, textarea {
+  font-size: 15px;
+  font-family:  'MS Serif', 'New York', sans-serif;
+  width: 90%;
+}
+ .boton {
+    font-size: 15px;
+}
+
+
+}
+
+
+/*iPad & iPad pro posición vertical*/
+@media(min-height: 1024px) {
+
+  footer {
+min-height: 300px;
+}
+
+}
+
+@media(max-width:253px) {
+
+.contenedor-flex-1 ul {
+  display: block;
+
+}
+#img {
+	width:80%;
+	height: auto;
+}	
+}
